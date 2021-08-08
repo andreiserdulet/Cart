@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- 
+        Scopul exercitiului: Magazin de ecommerce
+
+        Ce comercializam si 5 exemple de produse
+        IT Hardware Store
+
+        Ecrane:
+        - Home page with logo and cart, sectiune de produse care vor fi randate dintr-un array cu obiecte produs
+        - Definirea obiectului de produs
+        - Pagina de shopping cart aici vom afisa produsele selectate de utilizor
+        - Pentru a ramane shopping cartul vom folosi session storage sau localStorage
+        - Cand utlizatorul nu va avea nici un produs afisat ecran cu Nu aveti nici un produs in cos
+        - La fiecare produs va fi un button pentru incrementarea cantitatii acelui tip de produs
+        - De asemenea va fi si un total 
+        - Pe baza unui select in shopping cart care are livrare la domiciuliu sau ridicare personala suma totala va incrementata sau nu
+        x - La buy now se va afisa un formular de detalii livrare daca a fost cu livrare altfel se va afisa 
+        direct mesajul va asteptam in magazin sa ridicati comanda
+     -->
+
+
+  <!-- 
+        TODO: Homework
+        X- La click pe logo sa iti arate pagine de produse in loc de shopping cart utilizand clasa hidden
+        X- In shopping cart cand se da click pe minus ar trebui inlaturat produsul din shopping cart
+        si inlaturat si vizual(sters acel li)
+        X- Cand adaugam un produs sa afisam temporar un mesaj de succes(Produsul a fost adaugat in cos)
+        X- Cand dam click pe adaugare produs sa verificam cantitatea acelui produs cu ajutorul 
+        proprietatii stoc si daca nu e in stoc sa afisam un mesaj de eroare Nu mai e in stoc(puteti seta
+        un produs cu stoc 0 sa fie mai usor)
+        X- Peste icoana de shopping cart adaugati un counter pentru cate produse are in cos 3 de exemplu
+        (puteti folosi badge de la bootstrap https://getbootstrap.com/docs/4.0/components/badge/)
+        Se calculeaza cu shoppingCart.length
+      -->
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+      <a class="navbar-brand" id="logo">IT Hardware Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a id="shoppingCartButton">
+          <i class="fas fa-shopping-cart"> </i>
+          <!-- Peste icoana de shopping cart adaugati un counter pentru cate produse are in cos 3 de exemplu
+        (puteti folosi badge de la bootstrap-->
+          <div class="badge">
+            <span class="counter" id="counter">0</span>
+          </div>
+
+
+        </a>
+      </div>
+    </nav>
+    <!-- Ar trebui sa fie ascunsa in momentul in care utlizatorul e in shpping cart-->
+    <div class="row" id="sectionProducts">
+
+    </div>
+
+    <!-- Ar trebui ascunsa cand utilizatorul vede produsele -->
+    <div id="shoppingCart" class="hidden">
+      <h2>Shopping cart</h2>
+      <ul id="shoppingCartList">
+
+      </ul>
+      <h3>Total cost: <span id="costTotal">0</span></h3>
+    </div>
+  </div>
+
+
+  
+  <script src="js/script.js"></script>
+</body>
+
+</html>

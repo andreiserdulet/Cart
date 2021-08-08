@@ -1,0 +1,16 @@
+.hidden {
+    display: none;
+}
+.badge{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: green;
+    top: 5px;
+}
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
